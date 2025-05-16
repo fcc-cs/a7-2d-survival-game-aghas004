@@ -1,7 +1,8 @@
-[gd_scene load_steps=70 format=3 uid="uid://duuydrp2mk7u5"]
+[gd_scene load_steps=71 format=3 uid="uid://duuydrp2mk7u5"]
 
 [ext_resource type="Resource" uid="uid://bw572irhyph7u" path="res://inventory/playerinv.tres" id="1_3rwub"]
 [ext_resource type="Texture2D" uid="uid://7bs2i72iwb1u" path="res://art/Puny-Characters/Archer-Purple.png" id="2_k5o3e"]
+[ext_resource type="PackedScene" uid="uid://ceajbf7fsjtt5" path="res://inventory/inv_ui.tscn" id="3_7by7q"]
 
 [sub_resource type="GDScript" id="GDScript_b2tkn"]
 script/source = "extends CharacterBody2D
@@ -617,3 +618,5 @@ limit_left = -506
 limit_top = -270
 limit_right = 654
 limit_bottom = 418
+
+[node name="Inv_ui" parent="." instance=ExtResource("3_7by7q")]
