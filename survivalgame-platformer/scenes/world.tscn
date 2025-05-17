@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://byj66jc34uklq"]
+[gd_scene load_steps=13 format=3 uid="uid://byj66jc34uklq"]
 
 [ext_resource type="PackedScene" uid="uid://duuydrp2mk7u5" path="res://scenes/player.tscn" id="1_7cswu"]
 [ext_resource type="Texture2D" uid="uid://hxfj88lm4qla" path="res://art/survivalgame-terrian-defult.png" id="3_hll18"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ccjbgbl5b1kel" path="res://art/survivalgame-terrian-cliffs.png" id="4_lqe43"]
 [ext_resource type="Texture2D" uid="uid://dett5yd7w3w5j" path="res://art/survivalgame-trees.png" id="5_ny5sm"]
 [ext_resource type="PackedScene" uid="uid://c20bcyi5vsqep" path="res://scenes/apple_tree.tscn" id="7_d51sr"]
+[ext_resource type="PackedScene" uid="uid://b2bwnxunctpb8" path="res://scenes/stick_collectable.tscn" id="7_dt2c2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ja1vo"]
 texture = ExtResource("3_hll18")
@@ -258,8 +259,6 @@ sources/1 = SubResource("TileSetAtlasSource_g8nxn")
 
 [node name="world" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_7cswu")]
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_6i17y")
 format = 2
@@ -277,3 +276,23 @@ position = Vector2(75, 71)
 
 [node name="apple_tree2" parent="." instance=ExtResource("7_d51sr")]
 position = Vector2(54, 179)
+
+[node name="Stick_collectable" parent="." instance=ExtResource("7_dt2c2")]
+position = Vector2(207, -38)
+
+[node name="Stick_collectable2" parent="." instance=ExtResource("7_dt2c2")]
+position = Vector2(-48, 117)
+
+[node name="Stick_collectable3" parent="." instance=ExtResource("7_dt2c2")]
+position = Vector2(248, 76)
+
+[node name="apple_tree3" parent="." instance=ExtResource("7_d51sr")]
+position = Vector2(249, -162)
+
+[node name="apple_tree4" parent="." instance=ExtResource("7_d51sr")]
+position = Vector2(33, -145)
+
+[node name="apple_tree5" parent="." instance=ExtResource("7_d51sr")]
+position = Vector2(-334, -41)
+
+[node name="Player" parent="." instance=ExtResource("1_7cswu")]
