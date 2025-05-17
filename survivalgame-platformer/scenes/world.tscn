@@ -321,3 +321,18 @@ polygon = PackedVector2Array(-18, -90, -8, -265, 293, -267, 296, -89, 589, -88, 
 
 [node name="slime" parent="." instance=ExtResource("8_fkdde")]
 position = Vector2(189, 122)
+
+[node name="slime2" parent="." instance=ExtResource("8_fkdde")]
+position = Vector2(312, -16)
+
+[node name="slime3" parent="." instance=ExtResource("8_fkdde")]
+position = Vector2(-102, 93)
+
+[node name="slime4" parent="." instance=ExtResource("8_fkdde")]
+position = Vector2(449, 189)
+
+[node name="slime5" parent="." instance=ExtResource("8_fkdde")]
+position = Vector2(305, 314)
+
+[node name="slime6" parent="." instance=ExtResource("8_fkdde")]
+position = Vector2(-50, 344)
