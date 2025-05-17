@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 	if state == "apple":
 		$AnimatedSprite2D.play("apples")
 		if player_in_area:
-			if Input.is_action_just_pressed("collect"):
+			if Input.is_action_just_pressed("e"):
 				state = "no apples"
 				drop_apple()
 

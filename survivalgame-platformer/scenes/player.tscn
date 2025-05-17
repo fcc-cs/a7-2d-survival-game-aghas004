@@ -555,8 +555,7 @@ inv = ExtResource("1_3rwub")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iqyhj")
-animation = &"n-walk"
-frame_progress = 0.535064
+animation = &"e-attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -574,3 +573,5 @@ offset_left = -46.0
 offset_top = -80.0
 offset_right = 47.0
 offset_bottom = -13.0
+
+[node name="Marker2D" type="Marker2D" parent="."]

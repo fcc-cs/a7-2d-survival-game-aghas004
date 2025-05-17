@@ -2,7 +2,10 @@ extends CharacterBody2D
 
 var speed = 100
 var player_state
-@export var inv: Inv
+@export var inv: Inv 
+var bow_equiped = false
+var bow_cooldown = true
+var arrow = preload("res://scenes/arrow.tscn")
 
 func _physics_process(delta: float) -> void:
 	var direction =Input.get_vector("left", "right", "up", "down")
@@ -15,6 +18,24 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * speed
 	move_and_slide()
 	
+	if Input.is_action_just_pressed("e"):
+		if bow_equiped:
+			bow_equiped = false
+		else:
+			bow_equiped = true
+	
+	var mouse_pos = get_global_mouse_position()
+	$Marker2D.look_at(mouse_pos)
+	
+	if Input.is_action_just_pressed("left_mouse") and bow_equiped and bow_cooldown:
+		bow_cooldown = false
+		var arrow_instance = arrow.instantiate()
+		arrow_instance.rotation = $Marker2D.rotation
+		arrow_instance.global_position = $Marker2D.global_position
+		add_child(arrow_instance)
+		await  get_tree().create_timer(0.4).timeout
+		bow_cooldown = true
+		
 	play_anim(direction)
 
 func play_anim(dir):
