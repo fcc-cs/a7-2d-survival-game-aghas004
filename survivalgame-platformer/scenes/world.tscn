@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://byj66jc34uklq"]
+[gd_scene load_steps=12 format=3 uid="uid://byj66jc34uklq"]
 
 [ext_resource type="PackedScene" uid="uid://duuydrp2mk7u5" path="res://scenes/player.tscn" id="1_7cswu"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="2_ywyvo"]
 [ext_resource type="Texture2D" uid="uid://hxfj88lm4qla" path="res://art/survivalgame-terrian-defult.png" id="3_hll18"]
 [ext_resource type="Texture2D" uid="uid://dqtdugbaqie1b" path="res://art/survivalgame-terrian-water.png" id="4_lh7mr"]
 [ext_resource type="Texture2D" uid="uid://ccjbgbl5b1kel" path="res://art/survivalgame-terrian-cliffs.png" id="4_lqe43"]
@@ -260,7 +259,6 @@ sources/1 = SubResource("TileSetAtlasSource_g8nxn")
 [node name="world" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_7cswu")]
-script = ExtResource("2_ywyvo")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_6i17y")
