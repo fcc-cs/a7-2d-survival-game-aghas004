@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://byj66jc34uklq"]
+[gd_scene load_steps=14 format=3 uid="uid://byj66jc34uklq"]
 
 [ext_resource type="PackedScene" uid="uid://duuydrp2mk7u5" path="res://scenes/player.tscn" id="1_7cswu"]
 [ext_resource type="Texture2D" uid="uid://hxfj88lm4qla" path="res://art/survivalgame-terrian-defult.png" id="3_hll18"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dett5yd7w3w5j" path="res://art/survivalgame-trees.png" id="5_ny5sm"]
 [ext_resource type="PackedScene" uid="uid://c20bcyi5vsqep" path="res://scenes/apple_tree.tscn" id="7_d51sr"]
 [ext_resource type="PackedScene" uid="uid://b2bwnxunctpb8" path="res://scenes/stick_collectable.tscn" id="7_dt2c2"]
+[ext_resource type="PackedScene" uid="uid://pdmclf8njy3i" path="res://scenes/slime.tscn" id="8_fkdde"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ja1vo"]
 texture = ExtResource("3_hll18")
@@ -317,3 +318,6 @@ position = Vector2(-334, -41)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
 polygon = PackedVector2Array(-18, -90, -8, -265, 293, -267, 296, -89, 589, -88, 659, -89, 653, -79, 659, 317, 654, 376, 656, 401, 656, 418, 171, 418, 169, 437, 113, 439, 110, 416, -314, 418, -509, 412, -509, 312, -230, 313, -211, 304, -205, 290, -206, 197, -197, 193, -141, 193, -132, 185, -125, 176, -125, 20, -140, 8, -148, 4, -337, 4, -346, 10, -355, 19, -356, 174, -348, 187, -338, 194, -243, 194, -237, 197, -235, 270, -238, 280, -252, 284, -426, 282, -509, 282, -509, -87, -507, -98, -495, -90, -24, -88, -30, -340, -150, -360, -336, -372, -516, -330, -612, -248, -666, -128, -628, 128, -662, 304, -660, 510, -374, 584, 4, 586, 320, 576, 628, 564, 762, 496, 816, 414, 866, 196, 858, 14, 810, -228, 718, -322, 460, -380, 232, -384, 38, -388, -60, -394, 0, -321, -23, -281)
+
+[node name="slime" parent="." instance=ExtResource("8_fkdde")]
+position = Vector2(189, 122)
