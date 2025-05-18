@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+signal stick_collected
+signal apple_collected
+signal slime_collected
 var speed = 100
 var player_state
 @export var inv: Inv 
@@ -40,6 +43,7 @@ func _physics_process(delta: float) -> void:
 		add_child(arrow_instance)
 		await  get_tree().create_timer(0.4).timeout
 		bow_cooldown = true
+		
 		
 	play_anim(direction)
 
@@ -91,3 +95,11 @@ func player():
 	
 func collect(item):
 	inv.insert(item)
+	print(item)
+	if str(item) == "<Resource#-9223372001068972678>":
+		emit_signal("stick_collected")
+	if str(item) == "<Resource#-9223372002209823380>":
+		emit_signal("apple_collected")
+	if str(item) == "<Resource#-9223371999961676413>":
+		emit_signal("slime_collected")
+	
