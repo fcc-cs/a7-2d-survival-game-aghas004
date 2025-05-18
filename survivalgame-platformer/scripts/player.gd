@@ -7,6 +7,7 @@ var bow_equiped = false
 var bow_cooldown = true
 var arrow = preload("res://scenes/arrow.tscn")
 var mouse_loc_from_player = null
+@onready var camera = $Camera2D
 
 
 func _physics_process(delta: float) -> void:
