@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://byj66jc34uklq"]
+[gd_scene load_steps=15 format=3 uid="uid://byj66jc34uklq"]
 
 [ext_resource type="PackedScene" uid="uid://duuydrp2mk7u5" path="res://scenes/player.tscn" id="1_7cswu"]
 [ext_resource type="Texture2D" uid="uid://hxfj88lm4qla" path="res://art/survivalgame-terrian-defult.png" id="3_hll18"]
@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c20bcyi5vsqep" path="res://scenes/apple_tree.tscn" id="7_d51sr"]
 [ext_resource type="PackedScene" uid="uid://b2bwnxunctpb8" path="res://scenes/stick_collectable.tscn" id="7_dt2c2"]
 [ext_resource type="PackedScene" uid="uid://pdmclf8njy3i" path="res://scenes/slime.tscn" id="8_fkdde"]
+[ext_resource type="PackedScene" uid="uid://8d0wttlgaydf" path="res://scenes/world_2.tscn" id="9_4sdns"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ja1vo"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_htvh5"]
 texture = ExtResource("3_hll18")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -94,7 +95,7 @@ texture_region_size = Vector2i(40, 40)
 17:3/0 = 0
 18:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g8nxn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftrcn"]
 texture = ExtResource("4_lh7mr")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -147,7 +148,7 @@ texture_region_size = Vector2i(40, 40)
 17:2/0 = 0
 18:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lcxy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24j64"]
 texture = ExtResource("4_lqe43")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -193,7 +194,7 @@ texture_region_size = Vector2i(40, 40)
 15:2/0 = 0
 17:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atqnl"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iswho"]
 texture = ExtResource("5_ny5sm")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -266,10 +267,10 @@ texture_region_size = Vector2i(40, 40)
 [sub_resource type="TileSet" id="TileSet_6i17y"]
 tile_size = Vector2i(40, 40)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ja1vo")
-sources/2 = SubResource("TileSetAtlasSource_8lcxy")
-sources/3 = SubResource("TileSetAtlasSource_atqnl")
-sources/1 = SubResource("TileSetAtlasSource_g8nxn")
+sources/0 = SubResource("TileSetAtlasSource_htvh5")
+sources/2 = SubResource("TileSetAtlasSource_24j64")
+sources/3 = SubResource("TileSetAtlasSource_iswho")
+sources/1 = SubResource("TileSetAtlasSource_ftrcn")
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
@@ -317,7 +318,7 @@ position = Vector2(-334, -41)
 [node name="collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
-polygon = PackedVector2Array(-18, -90, -8, -265, 293, -267, 296, -89, 589, -88, 659, -89, 653, -79, 659, 317, 654, 376, 656, 401, 656, 418, 171, 418, 169, 437, 113, 439, 110, 416, -314, 418, -509, 412, -509, 312, -230, 313, -211, 304, -205, 290, -206, 197, -197, 193, -141, 193, -132, 185, -125, 176, -125, 20, -140, 8, -148, 4, -337, 4, -346, 10, -355, 19, -356, 174, -348, 187, -338, 194, -243, 194, -237, 197, -235, 270, -238, 280, -252, 284, -426, 282, -509, 282, -509, -87, -507, -98, -495, -90, -24, -88, -30, -340, -150, -360, -336, -372, -516, -330, -612, -248, -666, -128, -628, 128, -662, 304, -660, 510, -374, 584, 4, 586, 320, 576, 628, 564, 762, 496, 816, 414, 866, 196, 858, 14, 810, -228, 718, -322, 460, -380, 232, -384, 38, -388, -60, -394, 0, -321, -23, -281)
+polygon = PackedVector2Array(-13, -265, -11, -104, -16, -91, -35, -86, -487, -87, -502, -79, -506, 271, -505, 277, -249, 280, -240, 267, -238, 200, -257, 197, -337, 198, -354, 188, -360, 168, -360, 21, -351, 7, -334, 1, -153, 0, -134, 5, -123, 18, -122, 179, -129, 190, -133, 196, -199, 199, -199, 260, -200, 296, -206, 307, -213, 315, -227, 318, -502, 320, -505, 407, -501, 421, 94, 420, 110, 419, 107, 504, 86, 506, 14, 513, -10, 523, -7, 548, -8, 1039, 0, 1055, 24, 1054, 662, 1052, 664, 920, 553, 920, 529, 913, 521, 894, 520, 803, 507, 798, 302, 798, 282, 784, 281, 581, 292, 564, 306, 559, 572, 558, 589, 564, 599, 582, 600, 772, 594, 788, 585, 796, 566, 800, 565, 870, 573, 879, 667, 878, 669, 523, 666, 501, 173, 507, 172, 416, 655, 421, 671, 415, 671, -83, 659, -91, 301, -87, 295, -99, 296, -267, 2, -273, 15, -313, 181, -338, 447, -343, 634, -339, 771, -330, 842, -93, 859, 52, 911, 264, 866, 412, 816, 635, 797, 747, 776, 866, 773, 1044, 776, 1132, 709, 1201, 581, 1180, 253, 1163, 46, 1144, -85, 1130, -152, 1016, -118, 909, -123, 802, -107, 659, -92, 571, -66, 488, -90, 483, -176, 473, -302, 471, -392, 485, -551, 483, -613, 471, -637, 395, -649, 305, -675, 157, -675, 7, -675, -131, -642, -290, -604, -380, -473, -402, -337, -397, -192, -385, -84, -340, -48, -326, -32, -310, -15, -291, -4, -281, -7, -274)
 
 [node name="slime" parent="." instance=ExtResource("8_fkdde")]
 position = Vector2(189, 122)
@@ -336,3 +337,5 @@ position = Vector2(305, 314)
 
 [node name="slime6" parent="." instance=ExtResource("8_fkdde")]
 position = Vector2(-50, 344)
+
+[node name="world2" parent="." instance=ExtResource("9_4sdns")]
