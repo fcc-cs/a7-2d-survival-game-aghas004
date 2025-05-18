@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://8d0wttlgaydf"]
 
 [ext_resource type="Texture2D" uid="uid://hxfj88lm4qla" path="res://art/survivalgame-terrian-defult.png" id="1_4varg"]
-[ext_resource type="Script" path="res://scenes/world_2.gd" id="1_ky0pr"]
+[ext_resource type="Script" path="res://scripts/world_2.gd" id="1_ky0pr"]
 [ext_resource type="Texture2D" uid="uid://dqtdugbaqie1b" path="res://art/survivalgame-terrian-water.png" id="2_djllx"]
 [ext_resource type="Texture2D" uid="uid://ccjbgbl5b1kel" path="res://art/survivalgame-terrian-cliffs.png" id="3_ms6qd"]
 [ext_resource type="Texture2D" uid="uid://dett5yd7w3w5j" path="res://art/survivalgame-trees.png" id="4_ed056"]
@@ -269,6 +269,21 @@ sources/2 = SubResource("TileSetAtlasSource_17cgx")
 sources/3 = SubResource("TileSetAtlasSource_02jfh")
 sources/1 = SubResource("TileSetAtlasSource_na1py")
 
+[sub_resource type="Animation" id="Animation_o21pf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.784314)]
+}
+
 [sub_resource type="Animation" id="Animation_v1jop"]
 resource_name = "cover_fade"
 length = 2.0
@@ -283,21 +298,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0.784314), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_o21pf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0.784314)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mh4rx"]
